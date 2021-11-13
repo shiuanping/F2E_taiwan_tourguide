@@ -1,0 +1,196 @@
+*, *:before, *::after{
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    background: $background;
+}
+#app{
+    overflow: hidden;
+}
+.container{
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.header{
+    background: $white;
+    margin: 0 auto;
+    padding: 30px 108px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1{
+        img{
+            width: 99px;
+        }
+    }
+    ul{
+        display: flex;
+        a{
+            font-size: $fz-m;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 0 30px;
+        }
+        a:hover > p{
+            text-decoration: underline;
+        }
+    }
+    .nav{
+        div{
+            width: 34px;
+            height: 34px;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            line-height: 34px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+    }
+    .attractions_link{
+        div{
+            background: $primary;
+        }
+        p{
+            color: $primary;
+        }
+    }
+    .food_link{
+        div{
+            background: $secondary;
+        }
+        span{
+            width: 9px;
+            height: 9px;
+            background: $white;
+        }
+        p{
+            color: $secondary;
+        }
+    }
+    .traffic_link{
+        div{
+            background: $tertiary;
+        }
+        span{
+            width: 9px;
+            height: 9px;
+            background: $white;
+            border-radius: 50%;
+        }
+        p{
+            color: $tertiary;
+        }
+    }
+}
+.banner{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://s3-alpha-sig.figma.com/img/bd7a/7bea/773a7c33ba5496aa32fb0d43f798f4db?Expires=1636934400&Signature=Ob73w1Nsa9Dja6WElyT8lJLI2vH5M5DiVujqUwtg4K~bV35FQGjLGn--uQzrjyfbdCnRI3zq9XUfiNSUSc6h55feAyQBNyXyKzhBMP7i0jJRC0HF3QjB71LUCC446kVEY81S4XjL-v0KEDde3WbWTIMmObRNHREWYI6JXC8IG4QANj2b6UsRDnryq6dbOdGm6XXRRrRjx1DK2Ey7tFx7wrLEotmw8R30-DHmv~iU7AHtckitU~5Gh9se2bhJyhaWzgu5mTIUeNanqD6Zsbt6MgVR-jA00nLkEZ-aZ7ANElppFdvndQzd3WK~0j33k1I59D2Ivt5Fc1-TBXAnebFP0A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA') center / cover;
+    border: 30px solid $white;
+    border-top-width: 0;
+    margin-bottom: $space_l;
+    // overflow-x: hidden;
+    position: relative;
+    &::before{
+        content: "";
+        width: 40%;
+        height: 70px;
+        background: $black;
+        opacity: 0.3;
+        position: absolute;
+        top: 92%;
+        left: -35px;
+        transform: rotate(-5deg);
+        z-index: -1;
+        filter: blur(5px);
+    }
+    &::after{
+        content: "";
+        width: 40%;
+        height: 70px;
+        background: $black;
+        opacity: 0.3;
+        position: absolute;
+        top: 92%;
+        right: -35px;
+        transform: rotate(5deg);
+        z-index: -1;
+        filter: blur(5px);
+    }
+    h2{
+        font-size: 3.125rem;
+        font-weight: bold;
+        span{
+            color: $primary;
+        }
+    }
+    .container{
+        width: 100%;
+        height: 490px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    p{
+        margin-bottom: 1rem;
+    }
+}
+.banner_inner{
+    max-width: 500px;
+}
+.search{
+    button{
+        margin-left: 0.375rem;
+    }
+}
+.search_keywords{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    input{
+        font-size: 18px;
+        width: calc(97% - 40px);
+        box-shadow: 0px 2px 4px 0px #0D0B0C33;
+    }
+    button{
+        background: $primary;
+    }
+}
+.search_type{
+    display: flex;
+    justify-content: space-between;
+    select{
+        font-size: 18px;
+        width: calc(48% - 20px);
+        cursor: pointer;
+    }
+    select:disabled{
+        color: $gray;
+        background: $white;
+        opacity: 1;
+        cursor: default;
+    }
+    button{
+        background: $secondary;
+    }
+}
+.main{
+    section{
+        margin-bottom: $space_l;
+    }
+}
+.footer{
+    background: $white;
+    text-align: center;
+    padding: 25px 0;
+}

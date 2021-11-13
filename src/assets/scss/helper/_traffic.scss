@@ -1,0 +1,129 @@
+.traffic {
+    .container{
+        padding: 0 $space_l;
+    }
+}
+.selectArea{
+    background: $white;
+    padding: $space_m 0;
+    position: relative;
+    // &::before{
+    //     content: "";
+    //     width: 40%;
+    //     height: 45px;
+    //     background: $black;
+    //     opacity: 0.3;
+    //     position: absolute;
+    //     top: 70%;
+    //     left: -$space_m;
+    //     transform: rotate(-5deg);
+    //     z-index: -1;
+    //     filter: blur(5px);
+    // }
+    // &::after{
+    //     content: "";
+    //     width: 40%;
+    //     height: 45px;
+    //     background: $black;
+    //     opacity: 0.3;
+    //     position: absolute;
+    //     top: 70%;
+    //     right: -$space_m;
+    //     transform: rotate(5deg);
+    //     z-index: -1;
+    //     filter: blur(5px);
+    // }
+    &_container{
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .selection{
+        width: calc(50% - 25px);
+        margin: 0 3px;
+        box-shadow: 0px 2px 4px 0px #0D0B0C33;
+    }
+    .btn{
+        background: $primary;
+        margin-left: 3px;
+    }
+}
+.tab{
+    background: $white;
+    margin-bottom: $space_m;
+    ul{
+        display: flex;
+        justify-content: center;
+    }
+    a{
+        color: $black;
+        font-weight: bold;
+        display: block;
+        text-decoration: none;
+        padding: 1rem 5rem;
+
+    }
+    a.active{
+        border-bottom: 4px solid $primary;
+    }
+    span{
+        color: $primary;
+        margin-left: $space_s;
+    }
+}
+.hint{
+    color: $primary;
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: $space_s;
+}
+.bus_route{
+    min-height: 1000px;
+    background: $white;
+    padding: $space_l;
+    margin-bottom: $space_l;
+    p{
+        font-size: $fz-l;
+    }
+}
+.busArriveStatus{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 1.5rem;
+    li{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $space_m;
+    }
+    &_time{
+        width: 75%;
+        text-align: center;
+        border: 2px solid $black;
+        border-radius: 0.4375rem;
+        padding: $space_s $space_m;
+    }
+    p{
+        width: 100%;
+        font-size: 1rem;
+        padding: 0 $space_m;
+    }
+    .noDeparture{
+        color: $gray;
+        border-color: $gray;
+    }
+    .arriving{
+        color: $white;
+        background: $primary;
+        border-width: 0;
+    }
+    .willArriving{
+        color: $white;
+        background: $secondary;
+        border-width: 0;
+    }
+}
