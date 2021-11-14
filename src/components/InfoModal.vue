@@ -29,7 +29,7 @@
                     </li>
                     <li>
                         <span><i class="fas fa-phone-alt"></i></span>
-                        <p>{{data.Phone? data.Phone : '無'}}</p>
+                        <p><a href="tel:+">{{data.Phone? data.Phone : '無'}}</a></p>
                     </li>
                     <li v-if="data.ParkingInfo">
                         <span><i class="fas fa-parking"></i></span>

@@ -293,10 +293,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        p{
-            color: $white;
-            font-size: $fz-l;
-        }
     }
     &_pictureBar{
         display: flex;
@@ -318,6 +314,13 @@
             display: flex;
             align-items: center;
             margin-bottom: $space_s;
+        }
+        a{
+            color: $black;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
         }
         span{
             color: $primary;
