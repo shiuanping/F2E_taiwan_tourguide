@@ -80,7 +80,7 @@ export default {
     changeBanner (bannerType) {
       const now = new Date()
       const hour = now.getHours()
-      const time = (hour < 18) || (hour > 6) ? 'day' : 'night'
+      const time = (hour < 18) && (hour > 6) ? 'day' : 'night'
       switch (bannerType) {
         case 'stay':
           return require('../../assets/img/banner/stay.png')
