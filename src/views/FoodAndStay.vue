@@ -1,6 +1,6 @@
 <template>
     <div id="App">
-    <Banner></Banner>
+    <Banner :bannerType="'stay'"></Banner>
     <main class="main">
         <div class="container">
             <section>

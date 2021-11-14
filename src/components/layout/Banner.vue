@@ -1,5 +1,5 @@
 <template>
-    <div class="banner">
+    <div class="banner"  :style="{background: `url(${changeBanner(bannerType)}) center / cover`}">
         <div class="banner_inner">
             <div class="container">
                 <h2>Welcome to <span>Taiwan°</span></h2>
@@ -36,7 +36,8 @@ import { functionMixin } from '@/utils/mixins.js'
 export default {
   mixins: [functionMixin],
   props: {
-    data: Object
+    data: Object,
+    bannerType: String
   },
   data () {
     return {
@@ -71,12 +72,29 @@ export default {
           min.distance = distance
         }
       }
-      console.log(min)
       this.city = min.value
     },
     geoError (err) {
       console.warn('ERROR(' + err.code + '): ' + err.message)
+    },
+    changeBanner (bannerType) {
+      const now = new Date()
+      const hour = now.getHours()
+      const time = (hour < 18) || (hour > 6) ? 'day' : 'night'
+      switch (bannerType) {
+        case 'stay':
+          return require('../../assets/img/banner/stay.png')
+        default:
+          if (time === 'day') {
+            return require('../../assets/img/banner/day.png')
+          } else {
+            return require('../../assets/img/banner/night.jpg')
+          }
+      }
     }
+  },
+  mounted () {
+    this.changeBanner(this.bannerType)
   }
 }
 </script>

@@ -24,15 +24,15 @@
                         <p>{{data.StartTime ? data.StartTime: (data.OpenTime ? data.OpenTime :'無' ) }}</p>
                     </li>
                     <li>
-                        <span><i class="fas fa-ticket-alt"></i></span>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
                         <p>{{data.Address? data.Address : (data.Location?data.Location:'無')}}</p>
                     </li>
                     <li>
-                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <span><i class="fas fa-phone-alt"></i></span>
                         <p>{{data.Phone? data.Phone : '無'}}</p>
                     </li>
                     <li v-if="data.ParkingInfo">
-                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <span><i class="fas fa-parking"></i></span>
                         <p >{{data.ParkingInfo}}</p>
                     </li>
                 </ul>

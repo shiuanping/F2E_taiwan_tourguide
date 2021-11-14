@@ -95,11 +95,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('https://s3-alpha-sig.figma.com/img/bd7a/7bea/773a7c33ba5496aa32fb0d43f798f4db?Expires=1636934400&Signature=Ob73w1Nsa9Dja6WElyT8lJLI2vH5M5DiVujqUwtg4K~bV35FQGjLGn--uQzrjyfbdCnRI3zq9XUfiNSUSc6h55feAyQBNyXyKzhBMP7i0jJRC0HF3QjB71LUCC446kVEY81S4XjL-v0KEDde3WbWTIMmObRNHREWYI6JXC8IG4QANj2b6UsRDnryq6dbOdGm6XXRRrRjx1DK2Ey7tFx7wrLEotmw8R30-DHmv~iU7AHtckitU~5Gh9se2bhJyhaWzgu5mTIUeNanqD6Zsbt6MgVR-jA00nLkEZ-aZ7ANElppFdvndQzd3WK~0j33k1I59D2Ivt5Fc1-TBXAnebFP0A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA') center / cover;
     border: 30px solid $white;
     border-top-width: 0;
     margin-bottom: $space_l;
-    // overflow-x: hidden;
     position: relative;
     &::before{
         content: "";
